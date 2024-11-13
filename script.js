@@ -74,19 +74,19 @@ function updateCartModal(){
 
    cart.forEach(item => {
      const cartItemElement = document.createElement("div");
-     cartItemElement.classList.add("flex", "justify-between", "mb-4", "flex-col")
+     cartItemElement.classList.add("flex", "justify-between", "mb-4", "px-4", "flex-col", "border-2")
 
 
      cartItemElement.innerHTML = `
            
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-between  ">
        <div>
          <p class="font-medium">${item.name}</p>
          <p>Qtd: ${item.quantity}</p>
          <p class="font-medium mt-2">R$ ${item.price.toFixed(2)}</p>
        </div>
 
-        <button class="remove-from-cart-btn" data-name="${item.name}">excluir</button>
+        <button class= "remove-from-cart-btn"  data-name="${item.name}" >EXCLUIR</button>
 
       </div
      `
@@ -173,7 +173,7 @@ CheckoutBtn.addEventListener("click", function(){
     //enviar o pedido para whatssap
     const cartItems = cart.map((item) => {
         return(
-            ` ${item.name} Quantidade: ${item.quantity} preço: R$${item.price} |`
+            ` ${item.name}  +  Quantidade: ${item.quantity}  +  preço: R$${item.price}  +  `
         );
     }).join();
 
