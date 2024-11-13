@@ -147,7 +147,7 @@ CheckoutBtn.addEventListener("click", function(){
 
     if(!isOpen){
         Toastify({
-            text: "RESTAURANTE FECHADO, ABRE AS 21:00",
+            text: "RESTAURANTE FECHADO, ABRE AS 8:00",
             duration: 3000,
             close: true,
             gravity: "top", // `top` or `bottom`
@@ -191,7 +191,7 @@ CheckoutBtn.addEventListener("click", function(){
 function checkRestaurantOpen(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 21 && hora < 23;
+    return hora >= 8 && hora < 20;
 }
 
 const spanItem = document.getElementById("date-span")
